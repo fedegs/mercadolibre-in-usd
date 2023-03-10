@@ -1,0 +1,2 @@
+(()=>{function e(e){document.querySelectorAll("#new-price").forEach((o=>{o.style.display=e?"block":"none"}))}chrome.runtime.onMessage.addListener(((o,n,c)=>{console.log(o),o.show?e(!0):e(!1)}))})();
+//# sourceMappingURL=toggle.bundle.js.map

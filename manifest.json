@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "author": "Federico García Savoy",
+  "name": "MercadoLibre en USD",
+  "version": "0.1.0",
+  "description": "Convierte los precios en MercadoLibre de USD a ARS y de ARS a USD",
+  "permissions": ["management"],
+  "content_scripts": [
+    {
+      "js": ["scripts/productPage.bundle.js", "scripts/toggle.bundle.js"],
+      "matches": ["*://*.mercadolibre.com.ar/*"],
+      "exclude_matches": [
+        "*://listado.mercadolibre.com.ar/*",
+        "*://www.mercadolibre.com.ar/"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "js": ["scripts/productList.bundle.js", "scripts/toggle.bundle.js"],
+      "matches": ["*://listado.mercadolibre.com.ar/*"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

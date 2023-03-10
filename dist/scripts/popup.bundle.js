@@ -1,0 +1,2 @@
+(()=>{"use strict";const t=t=>document.querySelector(t);!async function(){const e=await async function(){const t=await fetch("https://api.bluelytics.com.ar/v2/latest");return(await t.json()).blue.value_sell}();t("#dolar-blue-price").textContent="$ "+e}();const e=t("#toggle");e.addEventListener("click",(async()=>{const[t]=await chrome.tabs.query({active:!0,lastFocusedWindow:!0});e.checked?await chrome.tabs.sendMessage(t.id,{show:!0}):await chrome.tabs.sendMessage(t.id,{show:!1})}))})();
+//# sourceMappingURL=popup.bundle.js.map

@@ -1,0 +1,20 @@
+{
+  "name": "mercadolibre-in-usd",
+  "version": "0.1.0",
+  "description": "Chrome extension to display product prices in USD if they are in ARS or in ARS if they are in USD",
+  "scripts": {
+    "build": "rm -rf dist && webpack --config webpack.config.prod.js",
+    "dev": "rm -rf dist && webpack --progress --watch"
+  },
+  "keywords": [],
+  "author": "Federico García Savoy",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "webpack": "^5.76.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "mercadolibre-in-usd": "link:"
+  }
+}
